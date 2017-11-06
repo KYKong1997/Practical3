@@ -17,10 +17,39 @@
     <table>
         <tr>
             <td>Depature Date:</td>
+            <td><asp:Calendar ID="Calendar1" runat="server" OnSelectionChanged="Calendar1_SelectionChanged"></asp:Calendar><asp:TextBox ID="dateTextbox" runat="server"></asp:TextBox></td>
+        </tr>
+        <tr>
+            <td>Adult:</td>
+            <td><asp:TextBox ID="qtyOfAdultTxt" runat="server"></asp:TextBox></td>
+
+        </tr>
+        <tr>
+            <td>Child:</td>
+            <td><asp:TextBox ID="qtyOfChildTxt" runat="server"></asp:TextBox></td>
+        </tr>
+        <tr>
+            <td>From :</td>
+            <td><asp:DropDownList ID="fromDropDown" runat="server" AutoPostBack="True" OnSelectedIndexChanged="fromDropDown_SelectedIndexChanged">
+                <asp:ListItem>Hentian Duta</asp:ListItem>
+                <asp:ListItem>Hentian Putra</asp:ListItem>
+                </asp:DropDownList></td>
+        </tr>
+        <tr>
+            <td>Destination:</td>
+            <td><asp:DropDownList ID="destinationDropDown" runat="server" AutoPostBack="True" OnSelectedIndexChanged="destinationDropDown_SelectedIndexChanged">
+                <asp:ListItem>Seremban</asp:ListItem>
+                <asp:ListItem>Butterworth</asp:ListItem>
+                </asp:DropDownList></td>
+        </tr>
+        <tr>
+            <td>Ticket Price:</td>
+            <td><asp:TextBox ID="ticketPriceTextbox" runat="server"></asp:TextBox></td>
         </tr>
     </table>
-    <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
+    
 </div>       
+        <asp:Label ID="errorLabel" runat="server" Text="Label"></asp:Label>
     </form>
 </body>
 </html>

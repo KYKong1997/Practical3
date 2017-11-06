@@ -94,6 +94,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ConfirmBooking.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -117,6 +118,13 @@
     </Compile>
     <Compile Include="BookTicketing.aspx.designer.cs">
       <DependentUpon>BookTicketing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmBooking.aspx.cs">
+      <DependentUpon>ConfirmBooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConfirmBooking.aspx.designer.cs">
+      <DependentUpon>ConfirmBooking.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

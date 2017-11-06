@@ -44,12 +44,19 @@
         </tr>
         <tr>
             <td>Ticket Price:</td>
-            <td><asp:TextBox ID="ticketPriceTextbox" runat="server"></asp:TextBox></td>
+            <td><asp:TextBox ID="ticketPriceTextbox" runat="server" Enabled="False"></asp:TextBox></td>
         </tr>
     </table>
     
 </div>       
         <asp:Label ID="errorLabel" runat="server" Text="Label"></asp:Label>
+        <p>
+            <asp:Button ID="bookTicketBtn" runat="server" Text="Book Ticket" OnClick="bookTicketBtn_Click" 
+                OnClientCLick="javascript:alert('You are now will be directed to the booking confirmation page')" PostBackUrl="~/ConfirmBooking.aspx"/>
+            &nbsp;
+            <asp:Button ID="cancelBtn" runat="server" Text="Cancel" OnMouseOver="this.value='Click if you confirm to reset selection'"
+                OnMouseOut="this.value='Cancel'"/>
+        </p>
     </form>
 </body>
 </html>
